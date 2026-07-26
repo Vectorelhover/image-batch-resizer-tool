@@ -1,0 +1,90 @@
+<svg viewBox="0 0 1200 360" width="1200" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d1220"/>
+      <stop offset="1" stop-color="#161c33"/>
+    </linearGradient>
+    <linearGradient id="frameA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="frameB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="frameC" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="txtGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#bff2ea"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bg)"/>
+
+  <circle cx="900" cy="120" r="220" fill="url(#glow)"/>
+  <circle cx="1080" cy="290" r="140" fill="url(#glow)"/>
+
+  <!-- faint grid backdrop -->
+  <g stroke="#2a3350" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="140" x2="1200" y2="140"/>
+    <line x1="0" y1="220" x2="1200" y2="220"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="760" y1="0" x2="760" y2="360"/>
+    <line x1="920" y1="0" x2="920" y2="360"/>
+    <line x1="1080" y1="0" x2="1080" y2="360"/>
+  </g>
+
+  <!-- Decorative: stack of images being resized -->
+  <g>
+    <!-- Large original image frame -->
+    <rect x="800" y="55" width="230" height="170" rx="10" fill="#111830" stroke="url(#frameB)" stroke-width="3"/>
+    <path d="M812 205 L865 150 L900 180 L935 140 L1005 205 Z" fill="url(#frameB)" opacity="0.5"/>
+    <circle cx="845" cy="90" r="14" fill="url(#frameB)" opacity="0.8"/>
+    <!-- corner resize handles -->
+    <rect x="795" y="50" width="12" height="12" fill="#a78bfa"/>
+    <rect x="1023" y="50" width="12" height="12" fill="#a78bfa"/>
+    <rect x="795" y="219" width="12" height="12" fill="#a78bfa"/>
+    <rect x="1023" y="219" width="12" height="12" fill="#a78bfa"/>
+
+    <!-- Arrow showing shrink direction -->
+    <path d="M965 245 L1030 280" stroke="#5eead4" stroke-width="3" fill="none" marker-end="url(#none)"/>
+    <polygon points="1030,280 1015,270 1022,286" fill="#5eead4"/>
+
+    <!-- Medium resized image -->
+    <rect x="1000" y="245" width="120" height="88" rx="8" fill="#0f1a2e" stroke="url(#frameA)" stroke-width="3"/>
+    <path d="M1008 320 L1035 292 L1055 308 L1075 285 L1112 320 Z" fill="url(#frameA)" opacity="0.6"/>
+    <circle cx="1022" cy="262" r="7" fill="url(#frameA)" opacity="0.9"/>
+  </g>
+
+  <!-- small extra thumbnail row (batch feel) -->
+  <g opacity="0.9">
+    <rect x="770" y="255" width="40" height="30" rx="4" fill="#111830" stroke="url(#frameC)" stroke-width="2"/>
+    <rect x="720" y="265" width="34" height="26" rx="4" fill="#111830" stroke="url(#frameC)" stroke-width="2"/>
+    <rect x="678" y="272" width="28" height="22" rx="3" fill="#111830" stroke="url(#frameA)" stroke-width="2"/>
+  </g>
+
+  <!-- dashed measuring lines -->
+  <g stroke="#4b5b82" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.6">
+    <line x1="800" y1="235" x2="1030" y2="235"/>
+    <line x1="795" y1="55" x2="775" y2="55"/>
+    <line x1="795" y1="225" x2="775" y2="225"/>
+    <line x1="775" y1="55" x2="775" y2="225"/>
+  </g>
+
+  <!-- Headline & tagline -->
+  <text x="60" y="150" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="72" fill="url(#txtGrad)" textLength="640" lengthAdjust="spacingAndGlyphs">Batch Image</text>
+  <text x="60" y="228" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" font-size="72" fill="url(#txtGrad)" textLength="440" lengthAdjust="spacingAndGlyphs">Resizer</text>
+
+  <text x="60" y="272" font-family="'Segoe UI', Arial, sans-serif" font-size="22" fill="#a9b6d8" textLength="760" lengthAdjust="spacingAndGlyphs">Resize and convert multiple images at once with customizable output settings.</text>
+
+  <!-- subtle accent line under headline -->
+  <rect x="60" y="288" width="140" height="4" rx="2" fill="url(#frameA)"/>
+</svg>
